@@ -628,11 +628,11 @@ using Compat: StringVector
 @test String(fill!(StringVector(5), 0x61)) == "aaaaa"
 
 # collect
-using OffsetArrays
-a = OffsetArray(1:3, -1:1)
-b = Compat.collect(a)
-@test indices(b) === (Base.OneTo(3),)
-@test b == [1,2,3]
+# using OffsetArrays
+# a = OffsetArray(1:3, -1:1)
+# b = Compat.collect(a)
+# @test indices(b) === (Base.OneTo(3),)
+# @test b == [1,2,3]
 
 # PR 22064
 module Test22064
